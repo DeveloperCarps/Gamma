@@ -58,6 +58,17 @@ main {
     & input:focus {
         outline: none;
     }
+    & span {
+        padding: 0;
+        margin: 0;
+        width: 18px;
+        height: 24px;
+
+        background: url('chevron-right.svg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
 }
 
 .disk-drive {
