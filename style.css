@@ -50,7 +50,7 @@ main {
         display: flex;
         flex-flow: column nowrap;
         justify-content: start;
-        align-items: start;
+        align-items: end;
         overflow: hidden;
     }
 
