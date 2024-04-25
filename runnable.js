@@ -11,21 +11,24 @@
     3. exit_disk: not necessary, but if you need to do some cleanup, do it here. It's required since the script will call this
     after exit. You can print anything or just simply do nothing. What matters is that this is called. 
 
-    Each function should be exported. It doesn't matter how you export them, so long as it exists in the scriptdisk. Variables 
-    and what-not aren't supported yet, but I'm planning to add them soon. Let's see where I can get to first.
+    I've also exposed the main console screen element to the scriptdisk via the console_element argument in main. This will help 
+    you modify what's shown on the screen. Remember, however, to clear the screen to its defaults before exiting.
 
+    UPDATE: main now needs to return a promise, execution needs to wait before calling exit_disk outside the module. the only
+    way to do that is to return a promise, so I've updated the template to reflect that.
  */
 
 const init_disk = () => {
-    
 };
 
-const main = () => {
-    console.log("Hello, World!");
+const main = (console_element) => {
+    return new Promise((resolve, reject) => {
+        // resolve();
+    });
 };
 
 const exit_disk = () => {
-
+    alert("Goodbye, world!");
 };
 
 export { init_disk, main, exit_disk };

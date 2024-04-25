@@ -40,9 +40,9 @@ async function takeInput() {
         // Iterates through each array object to find if command matches any in the array
         if(value == loader.commands[i].name) {
             // If it does, execute the command function and print the return value to the screen
-            let returnVal = await loader.commands[i].commandFunction();
+            let returnVal = loader.commands[i].commandFunction();
             // If the return value is an array, print each element in the array
-            returnVal.forEach(async (element) => {
+            returnVal.forEach((element) => {
                 newline(element, false);
             });
             // Break out of the loop
