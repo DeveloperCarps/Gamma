@@ -1,5 +1,7 @@
 # Project Gamma (Bouie_OS)
 
+![BouieOS](https://github.com/DeveloperCarps/Gamma/assets/129969583/bbb65ab8-5efa-4594-a228-bbdcaa422a6d)
+
 ## About
 
 This is a Simple project made by me! I love console screens from fallout, and I especially love making stuff on the Web! Combining both of those, I got this!
@@ -23,12 +25,13 @@ It's simple really. Just run the LOAD command and it will open a Explorer/Finder
 Building is fairly simple, provided your knowledgeable with Javascript. All the functions needed like creating a newline are provided by the site itself, but it's up to you to create your own scriptdisk. You'll find a js module in the repository called runnable.js, which shows you the scriptdisk template I made. Still a bit lazy? Here, let me just put it here:
 
 ***Sample file:*** `runnable.js`
-~~~
+```
 const init_disk = () => {
     // Initialization code here.
 };
 
-const main = (console_element) => {
+const main = (console_element) => ![BouieOS](https://github.com/DeveloperCarps/Gamma/assets/129969583/f84c119a-908f-442f-8bf7-d3fe820f949a)
+{
     return new Promise((resolve, reject) => {
 
         // run resolve or reject, depending on your use-case if you want to
@@ -43,4 +46,4 @@ const exit_disk = () => {
 };
 
 export { init_disk, main, exit_disk };
-~~~
+```
