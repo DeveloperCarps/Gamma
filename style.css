@@ -29,6 +29,7 @@ main {
     background-color: white;
     border-radius: 10px;
     position: relative;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
 .screen {
@@ -39,35 +40,55 @@ main {
     top: 5%;
     left: 5%;
     border-radius: 5px;
-    padding: 20px;
-
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: start;
-    align-items: end;
-
+    padding: 10px;
     color: rgb(255, 201, 99);
 
-    & input {
-        color: rgb(255, 201, 99);
-        width: 100%;
-        background: none;
-        border: none;
-        caret-shape: underscore;
-    }
-    & input:focus {
-        outline: none;
-    }
-    & span {
-        padding: 0;
-        margin: 0;
-        width: 18px;
-        height: 24px;
+    display: grid;
+    grid-template-rows: 1fr 24px;
 
-        background: url('chevron-right.svg');
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center;
+    & .console {
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: start;
+        align-items: end;
+        overflow: hidden;
+    }
+
+    & .input-wrapper {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 18px 1fr;
+        
+        & input {
+            color: rgb(255, 201, 99);
+            width: 100%;
+            background: none;
+            border: none;
+        }
+        & input:focus {
+            outline: none;
+        }
+        & span {
+            padding: 0;
+            margin: 0;
+            width: 18px;
+            height: 24px;
+    
+            background: url('chevron-right.svg') center center no-repeat;
+            background-size: cover;
+        }
+    }
+
+    & .newline {
+        text-align: justify;
+        width: 100%;
+        height: auto;
+    }
+
+    & .break {
+        width: 100%;
+        height: 24px;
+        display: -moz-box;
     }
 }
 
@@ -93,4 +114,26 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.indicator-lights {
+    display: grid;
+    grid-template-columns: 10px 10px 10px;
+    position: absolute;
+    bottom: 5%;
+    right: 5%;
+    border-radius: 50%;
+    column-gap: 10px;
+    
+    & span:nth-child(1) {
+        width: 10px;
+        height: 10px;
+        background-color: rgb(148, 255, 99);
+    }
+
+    & span:nth-child(2) {
+        width: 10px;
+        height: 10px;
+        background-color: rgb(255, 99, 99);
+    }
 }

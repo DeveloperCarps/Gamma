@@ -9,14 +9,21 @@
 <body>
     <main>
         <div class="computer">
-            <div class="screen" id="screen">
-                <span></span>
-                <input type="text">
+            <div class="screen">
+                <div class="console" id="console"></div>
+                <div class="input-wrapper">
+                    <span></span>
+                    <input type="text" id="screen_input">
+                </div>
             </div>
             <div class="disk-drive"></div>
-            <div class="eject-button">
+            <div class="eject-button"></div>
+            <div class="indicator-lights">
+                <span></span>
+                <span></span>
             </div>
         </div>
     </main>
+    <script src="./script.js" type="module"></script>
 </body>
 </html>

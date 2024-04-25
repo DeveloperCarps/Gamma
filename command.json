@@ -1,0 +1,13 @@
+{
+    "commands":[
+        {
+            "name":"echo",
+            "args":[
+                {
+                    "type":"string",
+                    "capture": "'(.*?)'"
+                }
+            ]
+        }
+    ]
+}
